@@ -33,7 +33,7 @@ Cette application utilise un serveur backend pour stocker et gérer les données
 1- Accédez au répertoire du backend :
   cd backend
   
-2- Installez les dépendances du backend en utilisant npm :
+2- Installez les dépendances du backend (express et cors) en utilisant npm :
   npm install
   
 3- Démarrer le serveur backend :
@@ -48,7 +48,10 @@ Le backend écoutera sur le port 3001 par défaut, assurez-vous qu'il est en cou
 2- Accédez au répertoire du frontend: 
   cd frontend
   
-3- Lancez l'application React :
+3- Installer les dépendances en utilisant npm : 
+  npm install
+  
+4- Lancez l'application React :
   npm start
   
 L'application sera accessible dans votre navigateur à l'adresse http://localhost:3000.
@@ -57,3 +60,4 @@ Utilisez l'interface pour ajouter, marquer comme complétées ou supprimer des t
 
 ## Auteur 
 RIFI Jihad
+
