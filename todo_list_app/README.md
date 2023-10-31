@@ -23,6 +23,7 @@ React : La bibliothèque JavaScript pour le frontend.
   
 2- Accédez au répertoire du projet :
   cd todo-list-app
+  
 3- Installez les dépendances en utilisant npm :
   npm install
   
@@ -31,19 +32,25 @@ Cette application utilise un serveur backend pour stocker et gérer les données
 
 1- Accédez au répertoire du backend :
   cd backend
+  
 2- Installez les dépendances du backend en utilisant npm :
   npm install
+  
 3- Démarrer le serveur backend :
   node server.js
+  
 Le backend écoutera sur le port 3001 par défaut, assurez-vous qu'il est en cours d'exécution.
 
 ## Utilisation
 1- Revenez au répertoire principal du projet :
   cd ..
+  
 2- Accédez au répertoire du frontend: 
   cd frontend
+  
 3- Lancez l'application React :
   npm start
+  
 L'application sera accessible dans votre navigateur à l'adresse http://localhost:3000.
 
 Utilisez l'interface pour ajouter, marquer comme complétées ou supprimer des tâches.
