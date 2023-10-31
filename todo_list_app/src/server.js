@@ -4,11 +4,14 @@ const app = express();
 const cors = require('cors')// Importez le module cors
 const port = 3001; // Port sur lequel le serveur écoutera
 app.use(bodyParser.json());
+
 const tasks = []; // Tableau pour stocker les tâches
+// configuration du middleware cors
 const corsOptions = {
     origin: 'http://localhost:3000',
-}; // Options pour le module CORS
+}; 
 app.use(cors(corsOptions));
+
 // Route pour obtenir la liste de toutes les tâches
 app.get('/tasks', (req, res) => {
   res.json(tasks);
@@ -42,6 +45,7 @@ app.put('/tasks/:id', (req, res) => {
 app.delete('/tasks/:id', (req, res) => {
   const taskId = parseInt(req.params.id);
   const index = tasks.findIndex((t) => t.id === taskId);
+  // 
   if (index !== -1) {
     tasks.splice(index, 1);
     res.json({ message: 'Tâche supprimée' });
@@ -50,6 +54,7 @@ app.delete('/tasks/:id', (req, res) => {
   }
 });
 
+// Démarrer le serveur
 app.listen(port, () => {
   console.log(`Serveur Node.js écoutant sur le port ${port}`);
 });

@@ -19,11 +19,12 @@ import {
 import DeleteIcon from '@mui/icons-material/Delete';
 
 function App() {
+  // Déclaration des états locaux pour stocker la liste des tâches et le titre d'une nouvelle tâche
   const [tasks, setTasks] = useState([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
   useEffect(() => {
-    // Charger la liste des tâches depuis le backend
+    // Utilisation de useEffect pour charger la liste des tâches depuis le backend
     axios.get('http://localhost:3001/tasks').then((response) => {
       setTasks(response.data);
     });
@@ -38,7 +39,7 @@ function App() {
   };
 
   const handleToggleComplete = (taskId) => {
-    // Mettre à jour l'état de la tâche au backend
+    // Mettre à jour l'état de la tâche au backend (complétée ou non)
     const updatedTasks = tasks.map((task) => {
       if (task.id === taskId) {
         task.completed = !task.completed;
