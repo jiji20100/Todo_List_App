@@ -1,5 +1,3 @@
-// webpack.config.js
-
 module.exports = {
     // ... Autres configurations ...
   
